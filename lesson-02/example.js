@@ -4,11 +4,12 @@ console.log("=== for ===");
 for (let i = 1; i <= 5; i++) {
     console.log("for:", i);
 }
-
+const fruits = ["🍎 Яблоко", "🍌 Банан", "🍊 Апельсин"];
 // 2. Цикл while
 console.log("\n=== while ===");
-let i = 1;
-while (i <= 5) {
+let i = 0;
+while (i < fruits.length) {
+    console.log(fruits[i])
     console.log("while:", i);
     i++;
 }
@@ -23,7 +24,8 @@ do {
 
 // 4. Цикл for...of (для массивов)
 console.log("\n=== for...of ===");
-const fruits = ["🍎 Яблоко", "🍌 Банан", "🍊 Апельсин"];
+console.log(fruits.length)
+console.log(fruits[0])
 for (const fruit of fruits) {
     console.log("for...of:", fruit);
 }
