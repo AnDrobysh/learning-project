@@ -2,7 +2,7 @@ const prompt = require("prompt-sync")({sigint: true});
 
 // TODO: создай переменные username, age и выведи их в консоль
 let username = 'Olesya';
-let age = prompt("How old are you? ");;
+let age = prompt("How old are you? ");
 let password;
 const p = 3.14;
 if (false) {
