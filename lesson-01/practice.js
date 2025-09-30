@@ -8,7 +8,7 @@ const p = 3.14;
 if (false) {
     console.log(`Welcome to the ${username}!`);
 }
-if (age > 40){
+if (age != 4) {
     console.log('вам больше 40')
 } else if (age > 10){
     console.log('вам больше 10')
