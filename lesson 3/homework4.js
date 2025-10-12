@@ -1,14 +1,78 @@
 const prompt = require("prompt-sync")({sigint: true});
 
-let myNumber = Number(prompt("Enter your number"));
-let compNumber = Math.floor(Math.random() * 6);
-console.log("comp figure: " + compNumber);
-if (myNumber > compNumber) {
-    console.log("I win");
-} else  if (myNumber < compNumber) {
+let myNumber = prompt("Enter your number ");
+let compNumber = Math.floor(Math.random() * 5) + 1;
+console.log("comp number: " + compNumber);
+
+//приведение типоа
+if (myNumber == "1" || myNumber == "2" || myNumber == "3" || myNumber == "4" || myNumber == "5") {
+    myNumber = Number(myNumber);
+
+}
+else if (myNumber == "one") {
+    myNumber = 1;
+}
+else if (myNumber == "two") {
+    myNumber = 2;
+}
+else if (myNumber == "three") {
+    myNumber = 3;
+}
+else if (myNumber == "four") {
+    myNumber = 4;
+}
+else if (myNumber == "five") {
+    myNumber = 5;
+}
+else if (myNumber > 5) {
+    console.log("enter correct value");
+}
+else {
+    console.log("enter correct value");
+}
+
+//логика игры
+if (myNumber > compNumber && myNumber <= 5) {
     console.log("You win");
-} else  if (myNumber == compNumber) {
-    console.log("dead heat");
-} else {
-    console.log("Enter correct number");
+}
+else {
+    do {
+        myNumber = prompt("Enter your number ");
+        if (myNumber == "1" || myNumber == "2" || myNumber == "3" || myNumber == "4" || myNumber == "5") {
+            myNumber = Number(myNumber);
+
+        }
+        else if (myNumber == "one") {
+            myNumber = 1;
+        }
+        else if (myNumber == "two") {
+            myNumber = 2;
+        }
+        else if (myNumber == "three") {
+            myNumber = 3;
+        }
+        else if (myNumber == "four") {
+            myNumber = 4;
+        }
+        else if (myNumber == "five") {
+            myNumber = 5;
+        }
+        else if (myNumber > 5) {
+            console.log("enter correct value");
+        }
+        else {
+            console.log("enter correct value");
+        }
+        compNumber = Math.floor(Math.random() * 5) + 1;
+        console.log("comp number: " + compNumber);
+        if (myNumber > compNumber && myNumber <= 5) {
+            console.log("I win");
+        } else if (myNumber < compNumber) {
+            console.log("loose");
+        } else if (myNumber == compNumber) {
+            console.log("dead heat");
+        }
+    }
+    while (myNumber <= compNumber || myNumber > 5);
+
 }
