@@ -40,7 +40,6 @@ else {
         myNumber = prompt("Enter your number ");
         if (myNumber == "1" || myNumber == "2" || myNumber == "3" || myNumber == "4" || myNumber == "5") {
             myNumber = Number(myNumber);
-
         }
         else if (myNumber == "one") {
             myNumber = 1;
