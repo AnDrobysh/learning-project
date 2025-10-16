@@ -1,5 +1,5 @@
 let number = 1;
-for (number = 1; number <= 10; number++) { //нужно тут было опять передвавать number значение? по- др у меня не работает
+for (number; number <= 10; number++) { //нужно тут было опять передвавать number значение? по- др у меня не работает
     console.log(number)
 }
 
